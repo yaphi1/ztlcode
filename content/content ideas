@@ -1,0 +1,73 @@
+tutorials
+- css dropdown menu
+- js dropdown menu
+- hamburger navigation icon
+- how to get autocomplete data from anywhere
+- how to be a good candidate
+- basic lightbox
+- how to approach responsive
+- biggest mistakes websites make and how to avoid them
+- how to make a basic php contact form
+- how to stop fake email submissions
+- js shortcuts (example, making a function for document.getElementById)
+- create an iphone or computer monitor with css and no images
+- rapid dev tips (sublime modules)
+- api instructions (g maps, youtube, wikipedia, etc), because most of them are so unclear
+- js store locator (maybe a course)
+- a trick to make google fonts faster (instead of going to their css file and then going to their fonts, use the text their css file directly)
+- how to use css :visited and :after to make a [viewed] thingy that shows next to a link that's been looked at already
+- js smooth scroll
+- basic animations with css3
+- remove space between inline block elements
+- horizontally center a div
+- how to autocomplete an address as shown here http://googlegeodevelopers.blogspot.com/2012/05/faster-address-entry-with-google-places.html
+- lightweight data visualization and graphs
+- how to update and refresh descriptions for facebook shares (using og tags and facebook's refresh)
+
+
+inspriation
+- lightsaber
+- js archery
+- category filter
+- link animation
+- single div pokeball
+- wikipedia api tooltip (hover over a word and the tooltip with info appears)
+
+
+snippets
+- countdown clock
+
+
+articles
+- how to collab (don't use global tags for styles, etc)
+- compatibility
+
+
+
+coder dilemmas
+see this for inspiration:
+http://designshack.net/articles/design-dilemma-articles/design-dilemma-when-the-client-expects-you-to-be-a-psychic/
+
+
+contests/challenges
+
+
+
+q&a with readers
+
+
+
+products
+- how to guides (some general like a language and some specific like how to use an api or create a store locator)
+- subscription to code challenge of the day (maybe not)
+
+
+
+ztl suggestions
+- humor, mockery
+- in the news
+- personal examples
+- field reports
+- psychology of
+- why don't others use this approach
+

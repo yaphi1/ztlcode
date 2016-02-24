@@ -1,0 +1,111 @@
+How to get autocomplete data from major websites
+
+prereqs: some idea of javascript is helpful, but if not, I'll still try to guide you through this
+
+
+
+steps:
+know what jsonp is (it's actually simple)
+	JSON, or JavaScript Object Notation, is a way of storing information in this format {"vehicle":"car", "color":"blue", "size":"big", "shape":"awesome"}.  You can pass this sort of information around in your own website, but for security reasons, you can't directly pass this info from a separate website.  That restriction is called the same-origin policy, but there's a way around it.
+
+	The HTML script tag allows you to import a script from anywhere, including another website.  Just what we needed!
+
+	The trick is to call the desired data through an HTML script tag.  However it will just be the JSON data, and the browser won't know what to do with that data on its own.  What do you do?  Wrap that JSON data in a function (this will be explained in a bit).  That function is known as the "padding" around the raw data, and it will allow you to do what you want with that data.  Now you have your JSONP, which stands for JSON with padding, and you can get data from other sites.  (Note: The other sites have to configure themselves to allow this, so don't worry; you're not taking data from sites unless they've allowed it.)
+
+	The details of how to do all of this will be explained in the next steps.
+
+
+
+Find out where the data is coming from
+	
+	Each time a site gets autocomplete data, your browser has to request it through the internet.  That's called a network request, and you can use it to see what urls the autocomplete data is coming from.  To see this in action, go to wikipedia and use your browser's developer tools to look at the network requests.  Here's how:
+
+	Firefox: Tools > Developer > Network (refresh page to see)
+	Chrome: View > Developer > Developer Tools > click Network
+	Safari: Develop > Show Web Inspector > click Timelines (refresh page to see)
+	Internet Explorer: press F12 key > click Network
+
+	Now that the network info is open, type something into the wikipedia search bar, and when the autocomplete results come up, you should see another network request added to the list.  Copy the full url of that request.  It should be something like http://en.wikipedia.org/w/api.php?action=opensearch&limit=10&format=json&callback=portalOpensearchCallback&search=a
+
+	Try pasting that url into your browser's address bar, and you should see the data for your search term.  You can experiment with different search terms by changing the part after "search=" in the url.
+
+	Congrats! Now you've found the data.  This works for other sites like google and youtube for example (for google, you'll have to make sure it's set to regular autocomplete and not automatic full search results).
+
+
+call the data yourself
+	
+	If you look at the url you got in the previous step, you'll notice a part that says callback=portalOpensearchCallback or something like that.  If you used a site other than Wikipedia, you might see something like jsonp=whatever (or maybe you'll still see callback=whatever).  In any case, that thingy represents the function that will be called to handle the data you're getting.  Replace the existing function name with a function name of your choice.  For this example, I'm going to use callback=myAmazingFunction.
+
+	Now create a script tag with your new url.  Here's an example:
+
+	<script src="http://en.wikipedia.org/w/api.php?action=opensearch&limit=10&format=json&callback=myAmazingFunction&search=a"></script>
+
+	Next, create a script to output the data and a div to hold the output.
+
+	<div id="output"></div>
+	<script>
+	function myAmazingFunction(data){
+		document.getElementById('output').innerHTML = data;
+	}
+	</script>
+
+	Now the raw data should be showing up in your div!  If you'd like, you can change the "search=" parameter to different values like "search=batman" for example.  Have fun with it!
+
+	If you want to see a slightly cleaner view of how the data is organized, try replacing innerHTML = data; with innerHTML = JSON.stringify(data);
+
+
+Call the data when a key is pressed
+	
+	Now that you know how to access the autocomplete data, you want the data to show up whenever you type inside a text box.  Here's how to make that happen.
+
+	When a key is pressed inside the text box, attach a script to the body and set the script's src equal to the url of the data from the previous step.
+
+	First create your input and output boxes:
+
+	<input type="text" id="searchbox">
+	<div id="output"></div>
+
+	Then write the code that attaches a script to the body every time a key press happens.
+
+	<script>
+	/* this function handles the data */
+	function myAmazingFunction(data){
+		document.getElementById('output').innerHTML = data;
+	}
+
+	/* this section handles key presses inside your input text box */
+	document.getElementById('searchbox').onkeypress = function(){
+
+		/* this variable stores whatever's in the input text box */
+		var stuff_in_text_box = document.getElementById('searchbox').value;
+
+		/* this is the script that will hold the data we're trying to get */
+		var myScript = document.createElement('script');
+		
+		/* this sets the src of the script equal to the url of the data */
+		myScript.src = 'http://en.wikipedia.org/w/api.php?action=opensearch&limit=10&format=json&callback=myAmazingFunction&search='+stuff_in_text_box;
+
+		/* this attaches the script to the body of the page */
+		document.body.appendChild(myScript);
+	};
+	</script>
+
+	Now you should see the data appear whenever you type stuff into the input text box.  Try it out!
+
+
+Clean up the excess data
+	
+	There's one more loose end to tie up.  Up to this point, you should have an autocomplete box that spits out data every time a key is pressed inside a text box.  The problem is that it will keep adding scripts to the body.  You need to delete the old scripts so that the page doesn't get flooded.
+
+	In order to get rid of excess scripts, add this code right before the part that says "var stuff_in_text_box":
+
+	if(typeof(myScript)!=='undefined'){
+		document.removeElement(myScript);
+	}
+
+	There! Now you you have your autocomplete data.
+
+
+Next steps
+	
+	From this point, you can use JavaScript to do what you want with the data.  That involves working with arrays, objects, and loops, all of which are beyond the scope of this tutorial.  However, now you know how to get data and incorporate it into your page.  I hope you have fun with this info!

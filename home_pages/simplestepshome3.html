@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home Page Test</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+<style type="text/css">
+
+/***********************************************************
+GENERAL
+***********************************************************/
+body{
+	margin: 0px;
+	font-size: 110%;
+	font-family: sans-serif;
+	line-height: 1.3;
+	color:#333;
+	background: #fff;
+}
+
+img{ border: 0px; }
+
+a{ text-decoration: none; }
+
+button{
+	border:0px;
+	cursor: pointer;
+}
+
+h1{
+	margin: 0px auto;
+	padding: 40px 0px 20px;
+	font-weight: 100;
+	font-size: 1.8em;
+}
+
+h1.homeh1{
+	margin: 0px auto;
+	padding: 0px 0px 40px;
+	font-size: 35px;
+	max-width: 650px;
+}
+
+h2{
+	line-height: 1.1;
+	font-weight: 700;
+	margin: 0px;
+	font-size: 2.1em;
+	padding: 0px 0px 20px;
+}
+
+h3{
+	font-size: 1.2em;
+	margin: 15px 0px 0px;
+}
+
+p{
+	margin: 15px 0px;
+}
+
+li{
+	line-height: 1.3;
+	margin: 0px;
+	padding-bottom: 15px;
+}
+
+
+
+
+
+/***********************************************************
+MENUBAR
+***********************************************************/
+
+#menubar{
+	padding: 20px;
+	font-weight: 100;
+	font-size: 24px;
+}
+
+#menubar a{
+	text-decoration: none;
+	color: #333;
+}
+
+
+
+
+
+/***********************************************************
+MASTHEAD
+***********************************************************/
+
+.masthead{
+	background: #269;
+	text-align: center;
+	color: #fff;
+	padding: 140px 20px;
+}
+
+.mastheadhome{
+	background: #28b;
+	text-align: center;
+	color: #fff;
+	padding: 50px 20px;
+}
+
+.homeformtext{
+	font-size:20px;
+	max-width: 700px;
+	margin: auto;
+	font-weight: 100;
+}
+
+.homeform{
+	max-width: 700px;
+	margin: auto;
+	padding-top: 10px;
+}
+
+.homeform input{
+	padding: 15px;
+	border: 1px solid #aaa;
+	font-size: 20px;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	box-shadow: 1px 1px 3px 0px #ddd inset;
+	border-radius: 3px;
+	width: 100%;
+	display: block;
+}
+
+.homeform button{
+	padding: 15px;
+	border: 0px;
+	font-size: 20px;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	border-radius: 3px;
+	background: #0be;
+	background: #0d8;
+	color: #fff;
+	width: 100%;
+	display: block;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.homeform button:hover{
+	background: #0cf;
+	background: #1e9;
+}
+
+
+
+
+
+/***********************************************************
+PLAIN CONTENT
+***********************************************************/
+
+.plaincontent{
+	padding: 30px 20px;
+	font-size: 1em;
+	font-weight: 100;
+	line-height: 1.4;
+}
+
+.plaincontent h2{
+	margin: 0px;
+	padding: 20px 0px 10px;
+}
+
+.plaincontent p{
+	margin: 0px;
+	padding: 0px 0px 20px;
+}
+
+.plaincontent ul{
+	margin: 0px;
+	padding: 0px 0px 20px 30px;
+}
+
+.plaincontent a{
+	color: #09d;
+}
+
+.plaincontent a:hover{
+	color: #0be;
+}
+
+
+
+
+
+
+/***********************************************************
+TUTORIAL CONTENT
+***********************************************************/
+
+.firstcontentline{
+	font-size: 1.3em;
+	font-weight: 100;
+	padding-top: 10px;
+	line-height: 1.2;
+}
+.showcasetitle{
+	padding: 10px 0px;
+	font-weight: 100;
+}
+
+.showcase{
+	text-align: center;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	margin-bottom: 20px;
+}
+
+.contentwidth{
+	max-width: 600px;
+	margin: auto;
+}
+
+.content{
+	padding: 20px;
+}
+
+.intro{
+	padding: 20px 20px 40px;
+}
+
+.stepscontainer{
+	background:#0ad;
+	padding:50px 0px;
+}
+
+.stepbox{
+	background:#fff; padding:30px 20px; border-radius:5px;
+	margin-bottom: 70px;
+}
+
+
+
+
+
+
+
+/***********************************************************
+CODE
+***********************************************************/
+
+code, .resultcontainer{
+	background: #444;
+	color: #fff;
+	display: block;
+	padding: 20px;
+	/*word-wrap: break-word;*/
+	overflow: scroll;
+	white-space: nowrap;
+	/*font-size: 20px;*/
+}
+.resultcontainer{ text-align: center; white-space: normal;}
+
+
+.tag{ color: gold; }
+
+.cssclass{ color: #aef; }
+
+.cssproperty{ color: pink; }
+
+.csscomment { color: #6f6; }
+
+.indent{ padding-left: 40px; }
+
+
+
+
+
+
+
+
+/***********************************************************
+EMAIL FORM
+***********************************************************/
+
+.signupsection{
+	padding: 10px 20px 40px;
+}
+
+.enjoyedthis{
+	font-size: 2em;
+	padding-top: 60px;
+}
+
+.signupform{
+	background:#ffcfac;
+	padding: 30px;
+	border-radius: 5px;
+	color: #333;
+	vertical-align: middle;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.signupcopy{
+	padding-bottom: 10px;
+}
+
+.gettutorials{
+	font-weight: 100;
+	font-size: 30px; 
+	padding-bottom: 7px;
+}
+
+.bluechecks{
+	list-style: none;
+	padding: 0px;
+	padding-left: 15px;
+	margin: 0px;
+	font-size: 0.95em;
+	font-weight: 100;
+}
+.bluechecks span{ color:#19b; }
+
+
+.zerofont{ font-size: 0px; }
+
+.signupform input{
+	padding: 15px;
+	border: 1px solid #aaa;
+	font-size: 20px;
+	box-sizing: border-box;
+	width: 100%;
+	margin-bottom: 10px;
+	box-shadow: 1px 1px 3px 0px #ddd inset;
+	border-radius: 3px;
+}
+
+
+.signupbutton{
+	position: relative;
+	display: inline-block;
+	padding: 15px 25px;
+	background: #056;
+	background-image: linear-gradient(#056,#0de);
+	text-decoration: none;
+	color: #fff;
+	font-size: 25px;
+	font-weight: 100;
+	border-radius: 3px;
+	box-shadow: 0px 1px 4px -2px #333;
+	text-shadow: 0px -1px #333;
+	border: 0px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.signupbutton:after{
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: calc(100% - 4px);
+	height: 50%;
+	background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+}
+
+.signupbutton:hover{
+	background: #067;
+	background-image: linear-gradient(#067,#0ef);
+}
+
+.nospam{
+	margin-top: 10px;
+	font-size: 16px;
+}
+
+
+
+
+
+/***********************************************************
+FOOTER
+***********************************************************/
+
+.copyright{
+	background: #333;
+	color: #fff;
+	padding: 30px 10px;
+	text-align: center;
+	font-size: 17px;
+}
+
+
+
+
+
+
+
+
+/************************************************************
+first breakpoint
+************************************************************/
+@media (min-width:700px) {
+	body{
+		font-size: 140%;
+	}
+
+	.mastheadhome{
+		padding: 120px 20px;
+		background-image:url('img/macbgcyan.jpg');
+		background-size: cover;
+	}
+
+	h1.homeh1{
+		font-size: 55px;
+	}
+
+	.homeform input{
+		width: 30%;
+		display: inline;
+	}
+
+	.homeform button{
+		width: 30%;
+		display: inline;
+	}
+
+	.stepbox{ padding:50px; }
+
+	.signupform input{
+		width: 49%;
+		display:inline-block;
+	}
+
+	.signupform input:first-child{
+		margin-right: 2%;
+	}
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="menubar"><a href="/">Simple Steps Code</a></div>
+
+<div class="mastheadhome">
+	<h1 class="homeh1">
+		Web development guides and inspiration
+	</h1>
+	<div class="homeformtext">
+		Nearly half of your visitors will leave if your webste takes longer than 3 seconds to load.  Get a free guide to boosting your site's speed the easy way.
+	</div>
+
+	<!-- Begin signup form -->
+	<form action="http://blinkdash.us9.list-manage.com/subscribe/post?u=cf6125d07d2da4bcb868629d4&amp;id=271f6daf1b" method="post" name="mc-embedded-subscribe-form" class="homeform" target="_blank" novalidate>
+		<input type="text" value="" name="FNAME" class="required" placeholder="First Name">
+		<input type="email" value="" name="EMAIL" class="required email" placeholder="Email">
+		<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+		<div style="position: absolute; left: -5000px;"><input type="text" name="b_cf6125d07d2da4bcb868629d4_271f6daf1b" tabindex="-1" value=""></div>
+		<button type="submit" name="subscribe">Get Free Guide</button>
+	</form>
+	<!-- End signup form -->
+
+</div>
+
+
+
+
+
+<div class="plaincontent contentwidth">
+	<p>
+		Learning coding concepts is just like eating snacks.
+	</p>
+	<p>
+		If the lessons come in small enough pieces, you can absorb a ton really quickly without realizing it.
+	</p>
+	<p>
+		That's the idea behind Simple Steps Code.
+	</p>
+	<h2>Featured tutorial:</h2>
+	<p>
+		<a href="/css-glass-button-tutorial/">
+			How to create a glass button with CSS and no images
+		</a>
+	</p>
+	<h2>
+		Upcoming content:
+	</h2>
+	<ul>
+		<li>biggest mistakes websites make and how to avoid them</li>
+		<li>how to approach responsive design</li>
+		<li>how to make a grid that dynamically updates depending on what the user searches for</li>
+		<li>how to do autocomplete (and get data from sites like google, youtube, wikipedia, etc)</li>
+		<li>lightbox effects</li>
+		<li>how to be a good candidate for web dev jobs</li>
+		<li>simple slide shows (without any of the confusion)</li>
+	</ul>
+	<p>
+		<a href="#">Sign up</a> to get tutorials and inspiration directly to your inbox, and be the first to know when this material arrives.
+	</p>
+</div>
+
+
+
+<div class="copyright">
+	Copyright &copy; <span id="copyyear">2015</span> Simple Steps Code
+</div>
+
+
+<script>
+var yb = { id : function(str){return document.getElementById(str)} };
+
+yb.id('copyyear').innerHTML = new Date().getFullYear();
+
+
+var codetags = document.getElementsByTagName('code');
+
+for(var i=0; i<codetags.length; i++){
+	formatCode(codetags[i]);
+}
+
+function formatCode(code){
+
+	code.innerHTML = code.innerHTML
+					// replace html brackets with html entities
+					.replace(/</g, '&lt;')
+					.replace(/>/g, '&gt;')
+					
+					// add indents after starting tags (but not single tags)
+					.replace(/(&lt;[^\/;]+&gt;)\n/g, function(v){
+						return v.search(/&lt;(img|br|input)/gi)>-1 ? v : v+'<div class="indent">';
+					})
+
+					// end indentation divs
+					.replace(/\n\s*&lt;\//g, '</div>&lt;\/')
+
+					// color the html tags
+					.replace(/&lt;/g, '<span class="tag">&lt;')
+					.replace(/&gt;/g, '&gt;</span>')
+
+					// get rid of the first line break
+					.replace(/^\n/, '')
+					
+					// replace subsequent line breaks with <br>
+					.replace(/\n/g, '<br>')
+
+					// color the css properties
+					.replace(/[\w-]+(?=:)(?!(:[\w-\s]+\{))/gim, function(v){return '<span class="cssproperty">'+v+'</span>'})
+
+					// color the css classes and ids
+					.replace(/\.(?=[^{]*{)/g, '<span class="cssclass">.')
+					.replace(/\#(?=[^{]*{)/g, '<span class="cssclass">#')
+					.replace(/\{/g, '</span>{')
+
+					// indent the css styles
+					.replace(/\{<br>/g, '{<div class="indent">')
+					.replace(/\}/g, '</div>}')
+
+					// style css comments
+					.replace(/\/\*/g, '<span class="csscomment">/*')
+					.replace(/\*\//g, '*/</span>')
+					;
+}
+</script>
+</body>
+</html>

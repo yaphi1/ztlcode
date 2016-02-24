@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home Page Test</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+
+<style type="text/css">
+
+/***********************************
+GENERAL STYLES
+************************************/
+body{
+	margin: 0px;
+	font-size: 110%;
+	font-family: sans-serif;
+	line-height: 1.3;
+	color:#333;
+	background: #fff;
+}
+
+button{
+	border:0px;
+	cursor: pointer;
+}
+
+h1{
+	margin: 0px auto;
+	padding: 0px 0px 60px;
+	font-weight: 100;
+	font-size: 2.5em;
+	max-width: 800px;
+}
+
+h2{
+	line-height: 1.1;
+	font-weight: 700;
+	margin: 0px;
+	font-size: 2.1em;
+	padding: 0px 0px 20px;
+}
+
+h3{
+	font-size: 1.2em;
+	margin: 15px 0px 0px;
+}
+
+p{
+	margin: 15px 0px;
+}
+
+ol li{
+	line-height: 1;
+	margin-bottom: 15px;
+}
+
+#menubar{
+	padding: 20px;
+	font-weight: 100;
+	font-size: 24px;
+}
+
+#menubar a{
+	text-decoration: none;
+	color: #333;
+}
+
+.masthead{
+	background: #269;
+	text-align: center;
+	color: #fff;
+	padding: 110px 20px;
+}
+
+.homeform{
+	max-width: 700px;
+	margin: auto;
+	padding-top: 10px;
+}
+
+.homeform input{
+	padding: 15px;
+	border: 1px solid #aaa;
+	font-size: 20px;
+	box-sizing: border-box;
+	width: 30%;
+	margin-bottom: 10px;
+	box-shadow: 1px 1px 3px 0px #ddd inset;
+	border-radius: 3px;
+}
+
+.homeform button{
+	padding: 15px;
+	border: 0px;
+	font-size: 20px;
+	box-sizing: border-box;
+	width: 30%;
+	margin-bottom: 10px;
+	border-radius: 3px;
+	background: #0be;
+	color: #fff;
+}
+
+.homeform button:hover{
+	background: #0cf;
+}
+
+
+/***********************************
+CONTENT STYLES
+************************************/
+
+.firstcontentline{
+	font-size: 1.3em;
+	font-weight: 100;
+	padding-top: 10px;
+	line-height: 1.2;
+}
+.showcasetitle{
+	padding: 10px 0px;
+	font-weight: 100;
+}
+
+.showcase{
+	text-align: center;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	margin-bottom: 20px;
+}
+
+.contentwidth{
+	max-width: 600px;
+	margin: auto;
+}
+
+.content{
+	padding: 20px;
+}
+
+.intro{
+	padding: 20px 20px 40px;
+}
+
+.stepscontainer{
+	background:#0ad;
+	padding:50px 0px;
+}
+
+.stepbox{
+	background:#fff; padding:30px 20px; border-radius:5px;
+	margin-bottom: 70px;
+}
+
+
+
+
+
+
+
+/***********************************
+CODE STYLES
+************************************/
+
+code, .resultcontainer{
+	background: #444;
+	color: #fff;
+	display: block;
+	padding: 20px;
+	/*word-wrap: break-word;*/
+	overflow: scroll;
+	white-space: nowrap;
+	/*font-size: 20px;*/
+}
+.resultcontainer{ text-align: center; white-space: normal;}
+
+
+.tag{ color: gold; }
+
+.cssclass{ color: #aef; }
+
+.cssproperty{ color: pink; }
+
+.csscomment { color: #6f6; }
+
+.indent{ padding-left: 40px; }
+
+
+
+
+
+
+
+
+/***********************************
+EMAIL FORM AND FOOTER STYLES
+************************************/
+
+.signupsection{
+	padding: 10px 20px 40px;
+}
+
+.enjoyedthis{
+	font-size: 2em;
+	padding-top: 60px;
+}
+
+.signupform{
+	background:#ffcfac;
+	padding: 30px;
+	border-radius: 5px;
+	color: #333;
+	vertical-align: middle;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.signupcopy{
+	padding-bottom: 10px;
+}
+
+.gettutorials{
+	font-weight: 100;
+	font-size: 30px; 
+	padding-bottom: 7px;
+}
+
+.bluechecks{
+	list-style: none;
+	padding: 0px;
+	padding-left: 15px;
+	margin: 0px;
+	font-size: 0.95em;
+	font-weight: 100;
+}
+.bluechecks span{ color:#19b; }
+.bluechecks li{ padding: 0px 0px 10px 0px; }
+
+
+.zerofont{ font-size: 0px; }
+
+.signupform input{
+	padding: 15px;
+	border: 1px solid #aaa;
+	font-size: 20px;
+	box-sizing: border-box;
+	width: 100%;
+	margin-bottom: 10px;
+	box-shadow: 1px 1px 3px 0px #ddd inset;
+	border-radius: 3px;
+}
+
+
+.signupbutton{
+	position: relative;
+	display: inline-block;
+	padding: 15px 25px;
+	background: #056;
+	background-image: linear-gradient(#056,#0de);
+	text-decoration: none;
+	color: #fff;
+	font-size: 25px;
+	font-weight: 100;
+	border-radius: 3px;
+	box-shadow: 0px 1px 4px -2px #333;
+	text-shadow: 0px -1px #333;
+	border: 0px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.signupbutton:after{
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: calc(100% - 4px);
+	height: 50%;
+	background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+}
+
+.signupbutton:hover{
+	background: #067;
+	background-image: linear-gradient(#067,#0ef);
+}
+
+.nospam{
+	margin-top: 10px;
+	font-size: 16px;
+}
+
+.copyright{
+	background: #333;
+	color: #fff;
+	padding: 30px 10px;
+	text-align: center;
+	font-size: 17px;
+}
+
+
+
+
+
+
+
+
+/* first breakpoint */
+@media (min-width:700px) {
+	body{
+		font-size: 140%;
+	}
+
+	.stepbox{ padding:50px; }
+
+	.signupform input{
+		width: 49%;
+		display:inline-block;
+	}
+
+	.signupform input:first-child{
+		margin-right: 2%;
+	}
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="menubar"><a href="/">Simple Steps Code</a></div>
+
+<!-- 
+15,154,200,0.8 - nice cyan
+235,255,255,0.9 - white with very slight blue tint
+-->
+
+<div class="masthead" style="position:relative; background:rgba(235,255,255,0.9); color:#333;">
+	<div style="position:absolute; left:0px; top:0px; width:100%; height:100%; background:url('macbg.png'); background-size:cover; z-index:-1;"></div>
+	<h1>Do cool stuff with your websites one step at a time</h1>
+	<div class="contentwidth" style="font-size:20px; max-width: 700px;">
+		Get tutorials and inspiration directly to your inbox.  Side effects may include fun ideas, improved coding skills, and better salary prospects.
+	</div>
+
+	<form action="http://blinkdash.us9.list-manage.com/subscribe/post?u=cf6125d07d2da4bcb868629d4&amp;id=271f6daf1b" method="post" name="mc-embedded-subscribe-form" class="homeform" target="_blank" novalidate>
+			<input type="text" value="" name="FNAME" class="required" placeholder="First Name">
+			<input type="email" value="" name="EMAIL" class="required email" placeholder="Email">
+			<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+		    <div style="position: absolute; left: -5000px;"><input type="text" name="b_cf6125d07d2da4bcb868629d4_271f6daf1b" tabindex="-1" value=""></div>
+		    <button type="submit" name="subscribe">Get Free Guides</button>
+		</form>
+		<!--End mc_embed_signup-->
+
+</div>
+
+
+
+<style>
+/***********************************
+DEMO STYLES
+************************************/
+
+
+/* demo code */
+.glass{
+	margin: 40px 0px;
+	position: relative;
+	display: inline-block;
+	padding: 15px 25px;
+	background-color: green;
+	background-image: linear-gradient(green,lightgreen);
+	box-shadow: 0px 1px 4px -2px #333;
+	border-radius: 3px;
+	text-decoration: none;
+	color: #fff;
+	font-size: 25px;
+	font-weight: 100;
+	text-shadow: 0px -1px #333;
+}
+
+.glass:after{
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: calc(100% - 4px);
+	height: 50%;
+	background-image: linear-gradient(rgba(255,255,255,0.8),rgba(255,255,255,0.2));
+}
+
+.glass:hover{
+	background-image: linear-gradient(#073,#0fa);
+}
+
+
+
+
+
+
+/* step 1 result */
+.result1{
+	position: relative;
+	display: inline-block;
+	padding: 15px 25px;
+	background: green;
+	background-image: linear-gradient(green,lightgreen);
+	text-decoration: none;
+	color: #fff;
+	font-size: 25px;
+	font-weight: 100;
+}
+
+
+/* step 2 result */
+.result2{
+	position: relative;
+	display: inline-block;
+	padding: 15px 25px;
+	background: green;
+	background-image: linear-gradient(green,lightgreen);
+	text-decoration: none;
+	color: #fff;
+	font-size: 25px;
+	font-weight: 100;
+}
+.result2:after{
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: calc(100% - 4px);
+	height: 50%;
+	background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+}
+
+
+/* step 3 result */
+.result3{
+	position: relative;
+	display: inline-block;
+	padding: 15px 25px;
+	background: green;
+	background-image: linear-gradient(green,lightgreen);
+	text-decoration: none;
+	color: #fff;
+	font-size: 25px;
+	font-weight: 100;
+	border-radius: 3px;
+	box-shadow: 0px 1px 4px -2px #333;
+	text-shadow: 0px -1px #333;
+}
+.result3:after{
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: calc(100% - 4px);
+	height: 50%;
+	background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+}
+
+.result3:hover{
+	background: linear-gradient(#073,#0fa);
+}
+
+.resultbuttons button{ margin:10px; }
+</style>
+
+
+<div class="intro contentwidth">
+	<div class="showcasetitle">
+		What to expect:
+	</div>
+	<div class="showcase">
+		<a href="#" class="glass">My button</a>
+	</div>
+	<div class="firstcontentline">
+		Good news. There are only 3 steps to creating a CSS glass button:
+	</div>
+	<ol>
+		<li>The background gradient</li>
+		<li>A light overlay</li>
+		<li>Some finishing touches</li>
+	</ol>
+	That's it.  Take a few minutes to go through this, and you'll be impressing everyone with glossy buttons, icons, and other things that go on pages. Let's get started!
+
+</div>
+
+<div class="stepscontainer">
+	<!-- 
+		colors to try:
+		#ea5 - warm orange
+		#268 - soothing blue
+		#0ba - mint green
+		#0ad - cerulean
+	 -->
+
+	<div class="contentwidth stepbox">
+
+		<h2>Step 1: The background gradient</h2>
+		<p>Pick the color you want your button to be, then set the background gradient to go from dark on top to light on the bottom. Also put in a solid background color for older browsers that don't support gradients. Also format the text while you're here.</p>
+
+		<h3>The CSS:</h3>
+		<code>
+			.glass{
+				/* background styles */
+				position: relative;
+				display: inline-block;
+				padding: 15px 25px;
+				background: green; /*for compatibility with older browsers*/
+				background-image: linear-gradient(green,lightgreen);
+
+				/* text styles */
+				text-decoration: none;
+				color: #fff;
+				font-size: 25px;
+				font-family: sans-serif;
+				font-weight: 100;
+			}
+		</code>
+
+		<h3>The HTML:</h3>
+		<code>
+			<a href="#" class="glass">My Button</a>
+		</code>
+
+		<h3>The result so far:</h3>
+		<div class="resultcontainer">
+			<a href="#" class="result1">My button</a>
+		</div>
+
+		<p>In the above CSS, the position needs to be relative so that you can put the overlay in the right place in the next step.</p>
+
+	</div>
+
+
+
+	<div class="contentwidth stepbox">
+		<h2>Step 2: A light overlay</h2>
+		<p>Now the glass should start to look like glass.  All you need to do is overlay a gradient that goes from transparent white to more transparent white and stops about halfway down.</p>
+
+		<h3>The CSS:</h3>
+		<code>
+			.glass:after{
+				content: '';
+				position: absolute;
+				top: 2px;
+				left: 2px;
+				width: calc(100% - 4px);
+				height: 50%;
+				background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+			}
+		</code>
+
+		<h3>The result so far:</h3>
+		<div class="resultcontainer">
+			<a href="#" class="result2">My button</a>
+		</div>
+	</div>
+
+
+	<div class="contentwidth stepbox">
+		<h2>Step 3: The finishing touches</h2>
+		<p>Now that your glass actually looks like glass, you can round the corners, style the text, add subtle shadows, and use hover effects.</p>
+		<p>Try adding the following lines to your .glass class in your CSS:</p>
+		<code>
+			border-radius: 3px;
+			box-shadow: 0px 1px 4px -2px #333;
+			text-shadow: 0px -1px #333;
+		</code>
+		<p>The first two lines round the corners of your button, and the last line gives the text an engraved look.</p>
+
+		<p>Now try adding the following CSS for a hover effect:</p>
+		<code>
+			.glass:hover{
+				background: linear-gradient(#073,#0fa);
+			}
+		</code>
+
+		<h3>The finished product:</h3>
+		<div class="resultcontainer">
+			<a href="#" class="result3">My button</a>
+		</div>
+	</div>
+
+
+
+	<div class="contentwidth stepbox">
+		<h2>Bonus: The fun part</h2>
+		<p>Now that you have the basic idea of how to make a glass button, you can try changing the colors, sizes, shapes, and more.  Maybe you'll make a <b>nav bar</b>, or maybe you'll make some <b>neat icons</b>.</p>
+
+		<h3>Examples of buttons and icons:</h3>
+		<div class="resultcontainer resultbuttons">
+			<button class="result3" style="background:linear-gradient(#258,#aef);">?</button>
+			<button class="result3" style="background:linear-gradient(#700,#f00);">b</button>
+			<button class="result3" style="background:linear-gradient(#740,gold);">app</button>
+			<button class="result3" style="background:linear-gradient(#507,#eaf);">icon</button>
+			<button class="result3" style="background:linear-gradient(#b40,orange);">button</button>
+			<button class="result3" style="background:linear-gradient(#073,#0fa);">go</button>
+			<button class="result3" style="background:linear-gradient(#000,#888);">&sum;</button>
+		</div>
+	</div>
+
+</div>
+
+
+
+<div class="contentwidth signupsection">
+	<div class="enjoyedthis">
+		Did you enjoy this?
+	</div>
+	<p>If yes, don't panic. Here's what to do next.</p>
+
+	<div class="signupform">
+		<div class="signupcopy">
+			<div class="gettutorials">Get tutorials and inspiration</div>
+			<ul class="bluechecks">
+				<li><span>&check;</span> improve your coding skills</li>
+				<li><span>&check;</span> get better jobs and salaries</li>
+				<li><span>&check;</span> have more freedom to create what you want</li>
+			</ul>
+		</div>
+		<!-- Begin MailChimp Signup Form -->
+		<!-- <form action="http://blinkdash.us9.list-manage.com/subscribe/post?u=cf6125d07d2da4bcb868629d4&amp;id=271f6daf1b" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+			<div class="zerofont">
+				<input type="text" value="" name="FNAME" class="required" placeholder="First Name">
+				<input type="email" value="" name="EMAIL" class="required email" placeholder="Email">
+			</div>
+			
+		    <div style="position: absolute; left: -5000px;"><input type="text" name="b_cf6125d07d2da4bcb868629d4_271f6daf1b" tabindex="-1" value=""></div>
+		    <button type="submit" name="subscribe" class="signupbutton">Get Free Tutorials and Inspiration</button>
+		    <div class="nospam">
+		    	I absolutely hate spam, so you won't be receiving any. Also, your info is 100% private. If you're not happy for any reason, you can unsubscribe at any time.  I'll do my best to keep everything interesting and useful though.
+		    </div>
+		</form> -->
+		<!--End mc_embed_signup-->
+	</div>
+
+</div>
+
+
+<div class="copyright">
+	Copyright &copy; <span id="copyyear">2014</span> Simple Steps Code
+</div>
+
+
+<script>
+var yb = { id : function(str){return document.getElementById(str)} };
+
+yb.id('copyyear').innerHTML = new Date().getFullYear();
+
+
+var codetags = document.getElementsByTagName('code');
+
+for(var i=0; i<codetags.length; i++){
+	formatCode(codetags[i]);
+}
+
+function formatCode(code){
+
+	code.innerHTML = code.innerHTML
+					// replace html brackets with html entities
+					.replace(/</g, '&lt;')
+					.replace(/>/g, '&gt;')
+					
+					// add indents after starting tags (but not single tags)
+					.replace(/(&lt;[^\/;]+&gt;)\n/g, function(v){
+						return v.search(/&lt;(img|br|input)/gi)>-1 ? v : v+'<div class="indent">';
+					})
+
+					// end indentation divs
+					.replace(/\n\s*&lt;\//g, '</div>&lt;\/')
+
+					// color the html tags
+					.replace(/&lt;/g, '<span class="tag">&lt;')
+					.replace(/&gt;/g, '&gt;</span>')
+
+					// get rid of the first line break
+					.replace(/^\n/, '')
+					
+					// replace subsequent line breaks with <br>
+					.replace(/\n/g, '<br>')
+
+					// color the css properties
+					.replace(/[\w-]+(?=:)(?!(:[\w-\s]+\{))/gim, function(v){return '<span class="cssproperty">'+v+'</span>'})
+
+					// color the css classes and ids
+					.replace(/\.(?=[^{]*{)/g, '<span class="cssclass">.')
+					.replace(/\#(?=[^{]*{)/g, '<span class="cssclass">#')
+					.replace(/\{/g, '</span>{')
+
+					// indent the css styles
+					.replace(/\{<br>/g, '{<div class="indent">')
+					.replace(/\}/g, '</div>}')
+
+					// style css comments
+					.replace(/\/\*/g, '<span class="csscomment">/*')
+					.replace(/\*\//g, '*/</span>')
+					;
+}
+</script>
+</body>
+</html>

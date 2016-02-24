@@ -1,0 +1,15 @@
+How to remove formatting from wordpress posts
+
+
+go to your theme's functions.php (there are other so watch out)
+
+/wp-content/themes/YOUR_THEME_NAME/functions.php
+
+
+add these lines:
+
+/* remove annoying formatting */
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );
+remove_filter('the_content', 'wptexturize');
+remove_filter('the_excerpt', 'wptexturize');

@@ -1,0 +1,7 @@
+to get rid of the annoying auto line breaks in posts (caused by wpautop), add this code to the end of your head
+
+<?php remove_filter( 'the_content', 'wpautop' ); remove_filter( 'the_excerpt', 'wpautop' ); ?>
+
+
+reference:
+http://codex.wordpress.org/Function_Reference/wpautop

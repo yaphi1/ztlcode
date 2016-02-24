@@ -1,0 +1,11 @@
+How to put scripts in wordpress posts without plugins
+
+Use a custom field, name it scripts
+Paste your script in there
+
+
+paste this in your single.php file:
+<?php echo get_post_meta($post->ID, "scripts", true); ?>
+
+
+done
